@@ -261,11 +261,11 @@ Parses a string representing a date into a JavaScript Date object, and then send
 Globalize function to change it to human readable format. When you need other language support, 
 please feel free to change it yourself. open your culture file and add these lines to end of calendars: definition and change
  accordingly.
-
+<pre>
 humanized: {
 	words: ["nyss","minuter","timmar","dagar","månader","år","sedan","av",""]
 }
-
+</pre>
 Then call to timeHumanized function as below.
 
 <pre>
