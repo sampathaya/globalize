@@ -18,6 +18,7 @@ as an extensible system for localization.
 <li><a href="#parseInt">Globalize.parseInt</a></li>
 <li><a href="#parseFloat">Globalize.parseFloat</a></li>
 <li><a href="#parseDate">Globalize.parseDate</a></li>
+<li><a href="#humonarized">Human readable date format</a></li>
 <li><a href="#extend">Utilizing and Extending Cultures</a></li>
 <li><a href="#defining">Defining Culture Information</a></li>
 <li><a href="#numbers">Number Formatting</a></li>
@@ -251,6 +252,28 @@ Globalize.parseDate( "1/2/2003" ); // Thu Jan 02 2003
 Globalize.culture( "fr" );
 Globalize.parseDate( "1/2/2003" ); // Sat Feb 01 2003
 </pre>
+</p>
+
+<a name="humonarized"></a>
+<h2 id="humonarized">Globalize.timeHumanized( value )</h2>
+<p>
+Parses a string representing a date into a JavaScript Date object, and then send to
+Globalize function to change it to human readable format. When you need other language support, 
+please feel free to change it yourself. open your culture file and add these lines to end of calendars: definition and change
+ accordingly.
+
+humanized: {
+	words: ["nyss","minuter","timmar","dagar","månader","år","sedan","av",""]
+}
+
+Then call to timeHumanized function as below.
+
+<pre>
+Globalize.culture( "en" );
+Globalize.culture( "fr" );
+Globalize.timeHumanized(new Date(Date.parse("2012-10-15")));
+</pre>
+
 </p>
 
 <a name="extend"></a>
